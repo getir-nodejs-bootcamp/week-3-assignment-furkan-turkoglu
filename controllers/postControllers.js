@@ -1,4 +1,5 @@
 const postDb = require("../models/postDb");
+const logRequests = require("../helper");
 
 // GET FUNCTION FOR GETTING ALL POSTS IN DB
 exports.getAllPosts = async (req, res) => {
@@ -7,8 +8,10 @@ exports.getAllPosts = async (req, res) => {
     const posts = await postDb;
     if (posts) {
       res.status(200).json(posts);
+      logRequests(req.url, "All posts fetched");
     } else {
-      res.status(404).send(`Post with id ${id} couldn't get...`);
+      res.status(404).send(`Posts couldn't fetched...`);
+      logRequests(req.url, "Posts couldn't fetched...");
     }
   } catch (error) {
     console.log(error);
@@ -26,8 +29,10 @@ exports.getPost = async (req, res) => {
     const post = await postDb.find((post) => id == post.id);
     if (post) {
       res.status(200).json(post);
+      logRequests(req.url, `Post with id ${id} fetched...`);
     } else {
-      res.status(404).send(`Post with id ${id} couldn't get...`);
+      res.status(404).send(`Post with id ${id} couldn't fetched...`);
+      logRequests(req.url, `Posts with id ${id} couldn't fetched...`);
     }
   } catch (error) {
     console.log(error);
@@ -63,6 +68,7 @@ exports.updatePost = async (req, res) => {
     if (updatedPostIndex !== -1) {
       postDb[updatedPostIndex] = {
         userId: post.userId,
+        id: Number(id),
         title:
           post.title != undefined ? post.title : postDb[updatedPostIndex].title,
         body:
@@ -71,8 +77,10 @@ exports.updatePost = async (req, res) => {
       console.log(postDb);
       console.log(post.body);
       res.status(200).json(postDb[updatedPostIndex]);
+      logRequests(req.url, `Post with id ${id} updated...`);
     } else {
       res.status(404).send("Post couldn't updated...");
+      logRequests(req.url, "Posts couldn't updated...");
     }
   } catch (error) {
     console.log(error);
@@ -89,14 +97,17 @@ exports.recreatePost = async (req, res) => {
     if (recreatedPostIndex !== -1) {
       postDb[recreatedPostIndex] = {
         userId: post.userId,
+        id: Number(id),
         title: post.title == undefined ? "" : post.title,
         body: post.body == undefined ? "" : post.body,
       };
       console.log(postDb);
       console.log(post.body);
       res.status(200).json(postDb[recreatedPostIndex]);
+      logRequests(req.url, `Post with id ${id} changed...`);
     } else {
       res.status(404).send("Post couldn't changed...");
+      logRequests(req.url, "Post couldn't changed...");
     }
   } catch (error) {
     console.log(error);
@@ -112,9 +123,11 @@ exports.deletePost = async (req, res) => {
       postDb.splice(deletedPostIndex, 1);
       console.log(deletedPostIndex);
       console.log(postDb);
-      res.status(200).send(`Post with id:${deletedPostIndex} deleted`);
+      res.status(200).send(`Post with id:${id} deleted`);
+      logRequests(req.url, `Post with id ${id} deleted...`);
     } else {
       res.status(404).send("Post couldn't deleted...");
+      logRequests(req.url, "Post couldn't deleted...");
     }
   } catch (error) {
     console.log(error);

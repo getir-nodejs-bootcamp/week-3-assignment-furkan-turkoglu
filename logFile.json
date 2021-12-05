@@ -1,36 +1,48 @@
 
-{"Request Url": "[object Object]"
-"Status": "[object Object]"
-"Request Time": "2021-12-5 11:3:30"}
-
-{"Request Url": "undefined"
-"Status": "[object Object]"
-"Request Time": "2021-12-5 11:4:3"}
-
-{"Request Url": "/"
-"Status": "[object Object]"
-"Request Time": "2021-12-5 11:15:48"}
-
-{"Request Url": "/"
-"Response": "[object Object]"
-"Request Time": "2021-12-5 11:38:7"}
-
-{"Request Url": "/"
-"Response": "[object Object]"
-"Request Time": "2021-12-5 11:38:28"}
-
 {"Request Url": "/"
 "Response": "All posts fetched"
-"Request Time": "2021-12-5 11:45:54"}
+"Request Time": "2021-12-5 14:55:14"}
 
-{"Request Url": "/"
-"Response": "All posts fetched"
-"Request Time": "2021-12-5 11:46:0"}
+{"Request Url": "/posts/1"
+"Response": "Post with id ${id} fetched..."
+"Request Time": "2021-12-5 14:55:28"}
 
-{"Request Url": "/"
-"Response": "All posts fetched"
-"Request Time": "2021-12-5 14:43:0"}
+{"Request Url": "/posts/2"
+"Response": "Post with id 2 fetched..."
+"Request Time": "2021-12-5 14:56:23"}
 
-{"Request Url": "/"
-"Response": "All posts fetched"
-"Request Time": "2021-12-5 14:45:4"}
+{"Request Url": "/posts/6"
+"Response": "Post with id 6 deleted..."
+"Request Time": "2021-12-5 14:57:6"}
+
+{"Request Url": "/posts/19"
+"Response": "Post with id 19 deleted..."
+"Request Time": "2021-12-5 14:57:52"}
+
+{"Request Url": "/posts/18"
+"Response": "Post with id 18 fetched..."
+"Request Time": "2021-12-5 14:58:17"}
+
+{"Request Url": "/posts/18"
+"Response": "Post with id 18 fetched..."
+"Request Time": "2021-12-5 14:58:57"}
+
+{"Request Url": "/posts/18"
+"Response": "Post with id 18 updated..."
+"Request Time": "2021-12-5 14:59:29"}
+
+{"Request Url": "/posts/19"
+"Response": "Post with id 19 updated..."
+"Request Time": "2021-12-5 14:59:56"}
+
+{"Request Url": "/posts/20"
+"Response": "Post with id 20 updated..."
+"Request Time": "2021-12-5 15:0:24"}
+
+{"Request Url": "/posts/17"
+"Response": "Post with id 17 changed..."
+"Request Time": "2021-12-5 15:0:37"}
+
+{"Request Url": "/posts/20"
+"Response": "Post with id 20 changed..."
+"Request Time": "2021-12-5 15:0:57"}
