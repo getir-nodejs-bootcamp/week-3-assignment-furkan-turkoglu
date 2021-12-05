@@ -1,0 +1,36 @@
+
+{"Request Url": "[object Object]"
+"Status": "[object Object]"
+"Request Time": "2021-12-5 11:3:30"}
+
+{"Request Url": "undefined"
+"Status": "[object Object]"
+"Request Time": "2021-12-5 11:4:3"}
+
+{"Request Url": "/"
+"Status": "[object Object]"
+"Request Time": "2021-12-5 11:15:48"}
+
+{"Request Url": "/"
+"Response": "[object Object]"
+"Request Time": "2021-12-5 11:38:7"}
+
+{"Request Url": "/"
+"Response": "[object Object]"
+"Request Time": "2021-12-5 11:38:28"}
+
+{"Request Url": "/"
+"Response": "All posts fetched"
+"Request Time": "2021-12-5 11:45:54"}
+
+{"Request Url": "/"
+"Response": "All posts fetched"
+"Request Time": "2021-12-5 11:46:0"}
+
+{"Request Url": "/"
+"Response": "All posts fetched"
+"Request Time": "2021-12-5 14:43:0"}
+
+{"Request Url": "/"
+"Response": "All posts fetched"
+"Request Time": "2021-12-5 14:45:4"}
