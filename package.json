@@ -20,7 +20,9 @@
   "homepage": "https://github.com/getir-nodejs-bootcamp/getir-nodejs-bootcamp-week-3-assignment-furkan-cloud#readme",
   "dependencies": {
     "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.1"
   },
   "devDependencies": {

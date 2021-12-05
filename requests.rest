@@ -1,5 +1,11 @@
 GET http://localhost:8000
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.MQ.9En6w1ktr0nxW56eW9hkL6-mnEXsH3-vUAwV9prx7CQ
 
 ###
-GET http://localhost:5000/posts/1
+GET http://localhost:8000/posts
 Content-Type: "application/json"
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.MQ.9En6w1ktr0nxW56eW9hkL6-mnEXsH3-vUAwV9prx7CQ
+
+###
+POST http://localhost:8000/login/1
+Content-Type: application/json

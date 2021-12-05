@@ -1,5 +1,12 @@
 const postDb = require("../models/postDb");
-const logRequests = require("../helper");
+const logRequests = require("../utils/helper");
+const authenticate = require("../utils/validate");
+
+exports.login = async (req, res) => {
+  const userId = req.params.id;
+  const accessToken = authenticate(userId);
+  res.json({ accessToken: accessToken });
+};
 
 // GET FUNCTION FOR GETTING ALL POSTS IN DB
 exports.getAllPosts = async (req, res) => {
