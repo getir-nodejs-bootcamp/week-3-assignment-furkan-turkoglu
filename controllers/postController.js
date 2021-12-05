@@ -1,7 +1,6 @@
 const postDb = require("../models/postDb");
 const logRequests = require("../utils/helper");
 
-
 // GET FUNCTION FOR GETTING ALL POSTS IN DB
 exports.getAllPosts = async (req, res) => {
   console.log(req.body);
@@ -44,7 +43,7 @@ exports.getPost = async (req, res) => {
 exports.createPost = async (req, res) => {
   const post = req.body;
   console.log(post);
-  console.log(postDb);
+
   try {
     const newPost = {
       userId: post.userId,
@@ -53,7 +52,9 @@ exports.createPost = async (req, res) => {
       body: post.body,
     };
     await postDb.push(newPost);
+    console.log(postDb);
     res.status(201).json(newPost);
+    logRequests(req.url, `Post with id ${newPost.id} created...`);
   } catch (error) {
     console.log(error);
   }
