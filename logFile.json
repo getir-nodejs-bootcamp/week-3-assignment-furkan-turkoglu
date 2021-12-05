@@ -62,3 +62,15 @@
 {"Request Url": "/"
 "Response": "All posts fetched"
 "Request Time": "2021-12-5 15:47:15"}
+
+{"Request Url": "/"
+"Response": "All posts fetched"
+"Request Time": "2021-12-5 16:28:51"}
+
+{"Request Url": "/2"
+"Response": "Post with id 2 fetched..."
+"Request Time": "2021-12-5 16:28:58"}
+
+{"Request Url": "/20"
+"Response": "Post with id 20 fetched..."
+"Request Time": "2021-12-5 16:29:3"}
